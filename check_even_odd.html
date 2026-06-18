@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even and Odd Checker</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f2f4f8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-top: 15px;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            color: #222;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Even and Odd Number Checker</h2>
+
+    <input type="number" id="num" placeholder="Enter a number">
+
+    <br>
+
+    <button onclick="checkNumber()">Check</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function checkNumber() {
+        let number = document.getElementById("num").value;
+
+        if (number === "") {
+            document.getElementById("result").innerHTML =
+                "Please enter a number";
+        }
+        else if (number % 2 === 0) {
+            document.getElementById("result").innerHTML =
+                number + " is an Even Number";
+        }
+        else {
+            document.getElementById("result").innerHTML =
+                number + " is an Odd Number";
+        }
+    }
+</script>
+
+</body>
+</html> 
